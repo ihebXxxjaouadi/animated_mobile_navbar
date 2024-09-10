@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="iphoneContainer">
+            <div class="mainScreen">
+                <p class="text"></p>
+                <p class="text"></p>
+                <p class="text"></p>
+                <p class="text"></p>
+            </div>
+            <div class="bottomNavbar">
+                <nav class="navbar">
+                    <ul>
+                        <li >
+                            <img src="./images/house.png" alt="">
+                            <img src="./images/3d-house.png" alt="">
+                            <span><p>Home</p></span>
+                        </li>
+                        <li >
+                            <img src="./images/heart.png" alt="">
+                            <img src="./images/3d-heart.png" alt="">
+
+                            <span><p>Likes</p></span>
+                        </li>
+                        <li>
+                            <img src="./images/gift.png" alt="">
+                            <img src="./images/3d-gift.png" alt="">
+
+                            <span><p>gifts</p></span>
+                        </li>
+                        <li>
+                            <img src="./images/mail.png" alt="">
+                            <img src="./images/3d-mail.png" alt="">
+
+                            <span><p>mails</p></span>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navigationContainer">
+                    <div class="navigationBtn"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+let allNavButtons = document.querySelectorAll(".navbar ul li")
+allNavButtons.forEach((navbtn) => {
+
+    navbtn.addEventListener("click", () => {
+        allNavButtons.forEach((navbtn) => {
+    navbtn.classList.remove("active")
+
+
+})
+        navbtn.classList.add("active")
+})
+})
+</script>
+</html>

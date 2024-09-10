@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 250px;
+    height: 250px;
+    background-color: #7695FF;
+    transform: scale(1.8);
+    .iphoneContainer {
+        height: 70%;
+        width: 170px;
+        margin: 0 auto;
+
+        .mainScreen {
+            height: 70%;
+            background-color: #ffffff30;
+
+            padding: 10px;
+
+            p {
+                background-color: #ffffff30;
+                border-radius: 5px;
+                margin-bottom: 5px;
+
+                &:first-of-type {
+                    width: 75%;
+                    height: 50px;
+                }
+
+                &:nth-of-type(2) {
+
+                    width: 70%;
+                    height: 5px;
+                }
+
+                &:nth-of-type(3) {
+
+                    width: 60%;
+                    height: 5px;
+                }
+
+                &:last-of-type {
+
+                    width: 68%;
+                    height: 5px;
+                }
+            }
+        }
+
+        .bottomNavbar {
+            height: 30%;
+
+            background-color: #D9D9D9;
+            border-radius: 0 0 35px 35px;
+
+            .navbar {
+                height: 75%;
+
+                ul {
+
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 5px 10px;
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        &:first-of-type {
+                            img {
+
+                                &:last-of-type {
+                                    filter: drop-shadow(0 2px 4px #4D9EF6);
+                                }
+
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            img {
+
+                                &:last-of-type {
+                                    filter: drop-shadow(0 2px 4px #FF788E);
+                                }
+
+                            }
+
+                        }
+
+                        &:nth-of-type(3) {
+                            img {
+
+                                &:last-of-type {
+                                    filter: drop-shadow(0 2px 4px #A372BE);
+                                }
+
+                            }
+
+                        }
+
+                        &:last-of-type {
+                            img {
+
+                                &:last-of-type {
+                                    filter: drop-shadow(0 2px 4px #DED9F0);
+                                }
+
+                            }
+                        }
+
+                        img {
+                            width: 15px;
+                            aspect-ratio: 1/1;
+                            object-fit: contain;
+                            display: block;
+
+                            &:last-of-type {
+                                display: none;
+
+                            }
+
+                        }
+
+
+                        span {
+                            font-size: 5px;
+                            margin-top: 2px;
+                            font-weight: 500;
+                            transition: color .6s;
+                            width: fit-content;
+                            color: #00000070;
+
+                            >p {
+                                transition: opacity 0;
+
+                            }
+
+                        }
+
+                        &.active {
+                            img {
+                                display: none;
+
+                                &:last-of-type {
+                                    display: block;
+                                    animation: toGrow .7s linear(0.00, 0.00180, 0.0465, 0.127, 0.238, 0.370, 0.516, 0.668, 0.819, 0.963, 1.09, 1.21, 1.30, 1.37, 1.42, 1.45, 1.45, 1.43, 1.40, 1.35, 1.30, 1.23, 1.16, 1.10, 1.03, 0.971, 0.918, 0.874, 0.840, 0.816, 0.802, 0.798, 0.803, 0.816, 0.836, 0.861, 0.889, 0.919, 0.950, 0.979, 1.01, 1.03, 1.05, 1.07, 1.08, 1.09, 1.09, 1.09, 1.08, 1.08, 1.07, 1.05, 1.04, 1.03, 1.01, 1.00, 0.988, 0.979, 0.971, 0.965, 0.961, 0.960, 0.960, 0.962, 0.965, 0.970, 0.975, 0.981, 0.987, 0.993, 0.999, 1.00, 1.01, 1.01, 1.02, 1.02, 1.02, 1.02, 1.02, 1.02, 1.01, 1.01, 1.01, 1.01, 1.00, 1.00, 0.999, 0.997, 0.995, 0.993, 0.992, 0.992, 0.992, 0.992, 0.993, 0.993, 0.994, 0.996, 0.997, 0.998, 0.999, 1.00, 1.00) forwards;
+                                    transform: scale(1) translateY(0) rotate(0deg);
+
+                                    @keyframes toGrow {
+                                        to {
+                                            transform: scale(1.5) translateY(-5px) translateX(-1px) rotate(-15deg);
+                                        }                                    }
+                                }
+                            }
+
+                            span {
+                                color: transparent;
+                                width: 4px;
+                                height: 4px;
+                                background-color: #00000020;
+                                border-radius: 50%;
+                                animation: toCirclate .2s forwards ease-in-out;
+                                animation-delay: .6s;
+                                transform: translateY(7px);
+                                opacity: 0;
+
+                                @keyframes toCirclate {
+                                    to {
+                                        opacity: 1;
+                                        transform: translateY(0);
+                                    }
+                                }
+
+                                p {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .navigationContainer {
+                height: 25%;
+                display: grid;
+                place-items: center;
+
+                .navigationBtn {
+                    width: 45%;
+                    height: 3px;
+                    border-radius: 5px;
+                    background-color: #7695FF;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 250px;
+  height: 250px;
+  background-color: #7695FF;
+  transform: scale(1.8);
+}
+.container .iphoneContainer {
+  height: 70%;
+  width: 170px;
+  margin: 0 auto;
+}
+.container .iphoneContainer .mainScreen {
+  height: 70%;
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  padding: 10px;
+}
+.container .iphoneContainer .mainScreen p {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.container .iphoneContainer .mainScreen p:first-of-type {
+  width: 75%;
+  height: 50px;
+}
+.container .iphoneContainer .mainScreen p:nth-of-type(2) {
+  width: 70%;
+  height: 5px;
+}
+.container .iphoneContainer .mainScreen p:nth-of-type(3) {
+  width: 60%;
+  height: 5px;
+}
+.container .iphoneContainer .mainScreen p:last-of-type {
+  width: 68%;
+  height: 5px;
+}
+.container .iphoneContainer .bottomNavbar {
+  height: 30%;
+  background-color: #D9D9D9;
+  border-radius: 0 0 35px 35px;
+}
+.container .iphoneContainer .bottomNavbar .navbar {
+  height: 75%;
+}
+.container .iphoneContainer .bottomNavbar .navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 10px;
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li:first-of-type img:last-of-type {
+  filter: drop-shadow(0 2px 4px #4D9EF6);
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li:nth-of-type(2) img:last-of-type {
+  filter: drop-shadow(0 2px 4px #FF788E);
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li:nth-of-type(3) img:last-of-type {
+  filter: drop-shadow(0 2px 4px #A372BE);
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li:last-of-type img:last-of-type {
+  filter: drop-shadow(0 2px 4px #DED9F0);
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li img {
+  width: 15px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li img:last-of-type {
+  display: none;
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li span {
+  font-size: 5px;
+  margin-top: 2px;
+  font-weight: 500;
+  transition: color 0.6s;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgba(0, 0, 0, 0.4392156863);
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li span > p {
+  transition: opacity 0;
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li.active img {
+  display: none;
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li.active img:last-of-type {
+  display: block;
+  animation: toGrow 0.7s linear(0, 0.0018, 0.0465, 0.127, 0.238, 0.37, 0.516, 0.668, 0.819, 0.963, 1.09, 1.21, 1.3, 1.37, 1.42, 1.45, 1.45, 1.43, 1.4, 1.35, 1.3, 1.23, 1.16, 1.1, 1.03, 0.971, 0.918, 0.874, 0.84, 0.816, 0.802, 0.798, 0.803, 0.816, 0.836, 0.861, 0.889, 0.919, 0.95, 0.979, 1.01, 1.03, 1.05, 1.07, 1.08, 1.09, 1.09, 1.09, 1.08, 1.08, 1.07, 1.05, 1.04, 1.03, 1.01, 1, 0.988, 0.979, 0.971, 0.965, 0.961, 0.96, 0.96, 0.962, 0.965, 0.97, 0.975, 0.981, 0.987, 0.993, 0.999, 1, 1.01, 1.01, 1.02, 1.02, 1.02, 1.02, 1.02, 1.02, 1.01, 1.01, 1.01, 1.01, 1, 1, 0.999, 0.997, 0.995, 0.993, 0.992, 0.992, 0.992, 0.992, 0.993, 0.993, 0.994, 0.996, 0.997, 0.998, 0.999, 1, 1) forwards;
+  transform: scale(1) translateY(0) rotate(0deg);
+}
+@keyframes toGrow {
+  to {
+    transform: scale(1.5) translateY(-5px) translateX(-1px) rotate(-15deg);
+  }
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li.active span {
+  color: transparent;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1254901961);
+  border-radius: 50%;
+  animation: toCirclate 0.2s forwards ease-in-out;
+  animation-delay: 0.6s;
+  transform: translateY(7px);
+  opacity: 0;
+}
+@keyframes toCirclate {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container .iphoneContainer .bottomNavbar .navbar ul li.active span p {
+  opacity: 0;
+}
+.container .iphoneContainer .bottomNavbar .navigationContainer {
+  height: 25%;
+  display: grid;
+  place-items: center;
+}
+.container .iphoneContainer .bottomNavbar .navigationContainer .navigationBtn {
+  width: 45%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #7695FF;
+}/*# sourceMappingURL=style.css.map */
